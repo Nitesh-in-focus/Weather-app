@@ -1,19 +1,15 @@
 {
-  "version": 3,
+  "version": 2,
   "builds": [
     {
-      "src": "dist/weather-app/server/entry.mjs",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "dist/weather-app/browser/**",
+      "src": "dist/weather-app/index.html",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "dist/weather-app/server/entry.mjs"
+      "dest": "/index.html"
     }
   ]
 }
