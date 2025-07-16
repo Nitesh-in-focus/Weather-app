@@ -22,7 +22,7 @@ A futuristic Angular SSR-powered weather dashboard with real-time forecasts, hou
 Clone the repo and install dependencies:
 
 ```bash
-git clone https://github.com/your-username/weather-app.git
+git clone https://github.com/Nitesh-in-focus/weather-app.git
 cd weather-app
 npm install
 ```
