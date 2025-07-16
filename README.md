@@ -9,7 +9,7 @@ A futuristic Angular SSR-powered weather dashboard with real-time forecasts, hou
 ## 🔥 Features
 
 - ⚡ Server-Side Rendering (SSR) for lightning-fast loads  
-- 🌤️ 7-day weather forecast & hourly updates  
+- 🌤️ 5-day weather forecast & hourly updates  
 - 🌚 Dark mode UI with glassmorphism styling  
 - 📱 Fully responsive design for all screen sizes  
 - 🎯 Animated UI elements & box-based layout  
