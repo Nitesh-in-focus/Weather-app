@@ -1,0 +1,22 @@
+<div class="weather-card" *ngIf="weather">
+  <h2>{{ weather.location.name }}, {{ weather.location.country }}</h2>
+
+  <img
+    [src]="'https:' + weather.current.condition.icon"
+    alt="Weather Icon"
+    class="weather-icon"
+  />
+
+  <p class="condition">{{ weather.current.condition.text }}</p>
+  <p>
+    <strong>🌡️ Temp:</strong> {{ weather.current.temp_c }}°C /
+    {{ weather.current.temp_f }}°F
+  </p>
+  <p><strong>😰 Feels like:</strong> {{ weather.current.feelslike_c }}°C</p>
+  <p><strong>💧 Humidity:</strong> {{ weather.current.humidity }}%</p>
+  <p>
+    <strong>💨 Wind:</strong> {{ weather.current.wind_kph }} km/h ({{
+      weather.current.wind_dir
+    }})
+  </p>
+</div>

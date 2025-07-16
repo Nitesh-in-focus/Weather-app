@@ -1,0 +1,95 @@
+/* === Hourly Forecast Section === */
+.hourly-section {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  color: #eeeeee;
+  transition: all 0.3s ease-in-out;
+}
+
+.hourly-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #4fc3f7;
+  text-align: center;
+}
+
+/* === Grid Layout === */
+.hourly-forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.hour-card {
+  background: #2a2a3d;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 14px 12px;
+  text-align: center;
+  color: #eeeeee;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hour-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.hour-icon {
+  height: 48px;
+  margin: 10px 0;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+}
+
+.time {
+  font-weight: bold;
+  font-size: 14px;
+  color: #29b6f6;
+}
+
+.temp {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.desc {
+  font-size: 13px;
+  font-style: italic;
+  opacity: 0.75;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* 📱 Mobile Friendly */
+@media screen and (max-width: 600px) {
+  .hourly-section {
+    padding: 16px;
+  }
+
+  .hourly-title {
+    font-size: 18px;
+  }
+
+  .hourly-forecast-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 16px;
+  }
+
+  .hour-card {
+    padding: 12px 8px;
+  }
+
+  .desc {
+    font-size: 12px;
+  }
+}

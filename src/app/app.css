@@ -1,0 +1,102 @@
+/* === Core Container Setup === */
+.app-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  padding: 24px;
+  background-color: #1e1e2e; /* Full dark bg */
+  color: #eeeeee;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* 🌀 Loading & Error */
+.loading,
+.error {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+  color: #29b6f6;
+  font-weight: bold;
+}
+
+/* 📦 Main Dashboard Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 28px;
+  margin-top: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* 🧱 Left Panel (main content) */
+.main-left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+/* 📍 Right Info Panel */
+.main-right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+/* 🌇 Hourly Forecast Full-Width Wrapper */
+.hourly-forecast-wrapper {
+  width: 100%;
+  margin-top: 24px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* 🔒 Prevent overflows from any nested components */
+.app-container *,
+.dashboard-grid *,
+.main-left-panel *,
+.main-right-panel * {
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* ✅ Responsive for Tablets & Mobiles */
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .hourly-forecast-wrapper {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    padding: 16px;
+  }
+
+  .dashboard-grid {
+    gap: 16px;
+    padding: 12px;
+  }
+
+  .main-left-panel,
+  .main-right-panel {
+    gap: 16px;
+  }
+}

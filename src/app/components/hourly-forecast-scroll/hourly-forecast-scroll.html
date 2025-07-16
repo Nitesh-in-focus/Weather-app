@@ -1,0 +1,16 @@
+<section class="hourly-section" *ngIf="hourlyData?.length">
+  <h3 class="hourly-title">⏰ Hourly Forecast</h3>
+
+  <div class="hourly-forecast-grid">
+    <div *ngFor="let hour of hourlyData" class="hour-card">
+      <p class="time">{{ hour.time.split(' ')[1] }}</p>
+      <img
+        [src]="'https:' + hour.condition.icon"
+        alt="Weather Icon"
+        class="hour-icon"
+      />
+      <p class="temp">{{ hour.temp_c }}°C</p>
+      <p class="desc">{{ hour.condition.text }}</p>
+    </div>
+  </div>
+</section>

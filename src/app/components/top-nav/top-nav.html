@@ -1,0 +1,39 @@
+<div class="top-nav">
+  <!-- 🔵 Left: Branding -->
+  <div class="branding">
+    <h1>Weather App</h1>
+  </div>
+
+  <!-- 🔍 Middle: Search & Recent -->
+  <div class="center-section">
+    <div class="search-box">
+      <input
+        type="text"
+        [(ngModel)]="cityName"
+        (keyup.enter)="onSearch()"
+        placeholder="Enter city name..."
+        aria-label="City name"
+      />
+      <button (click)="onSearch()">Search</button>
+    </div>
+
+    <!-- 🕘 Recent Searches -->
+    <div class="recent-cities" *ngIf="recentCities?.length">
+      <p>Recent:</p>
+      <div class="city-list">
+        <button
+          *ngFor="let city of recentCities"
+          type="button"
+          (click)="searchCity.emit(city)"
+        >
+          {{ city }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🎞️ Right: Reserved for Lottie animation -->
+  <div class="theme-toggle">
+    <!-- Lottie animation will go here later -->
+  </div>
+</div>

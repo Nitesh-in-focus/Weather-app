@@ -1,0 +1,14 @@
+<section class="forecast-section" *ngIf="forecastDays?.length">
+  <h3 class="forecast-title">📅 5-Day Forecast</h3>
+
+  <div class="forecast-grid">
+    <div *ngFor="let day of forecastDays" class="forecast-card">
+      <p class="date"><strong>{{ day.date }}</strong></p>
+      <img [src]="'https:' + day.day.condition.icon" alt="Forecast Icon" class="forecast-icon" />
+      <p class="condition">{{ day.day.condition.text }}</p>
+      <p class="temp-range">
+        🌡️ {{ day.day.mintemp_c }}°C - {{ day.day.maxtemp_c }}°C
+      </p>
+    </div>
+  </div>
+</section>

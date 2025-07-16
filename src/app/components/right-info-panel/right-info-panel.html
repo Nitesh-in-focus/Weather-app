@@ -1,0 +1,23 @@
+<div class="right-info-panel" *ngIf="weatherData">
+  <h3>
+    📍 {{ weatherData.location.name }}, {{ weatherData.location.region }},
+    {{ weatherData.location.country }}
+  </h3>
+
+  <img [src]="'https:' + weatherData.current.condition.icon" alt="Weather Icon" />
+
+  <p><strong>{{ weatherData.current.condition.text }}</strong></p>
+
+  <hr />
+
+  <div class="info-cards">
+    <div class="info-box">🕒 Last Updated: {{ weatherData.current.last_updated }}</div>
+    <div class="info-box">🧭 Wind Direction: {{ weatherData.current.wind_dir }}</div>
+    <div class="info-box">🌀 Pressure: {{ weatherData.current.pressure_mb }} mb</div>
+    <div class="info-box">🌫️ Visibility: {{ weatherData.current.vis_km }} km</div>
+    <div class="info-box">🌞 UV Index: {{ weatherData.current.uv }}</div>
+    <div class="info-box">🧊 Dew Point: {{ weatherData.current.dewpoint_c || 'N/A' }}°C</div>
+    <div class="info-box">🔥 Heat Index: {{ weatherData.current.heatindex_c || 'N/A' }}°C</div>
+    <div class="info-box">☁️ Cloud Coverage: {{ weatherData.current.cloud }}%</div>
+  </div>
+</div>

@@ -1,1 +1,74 @@
-/* You can add global styles to this file, and also import other style files */
+/* 🌍 You can add global styles to this file, and also import other style files */
+
+/* 🌞 Day Theme Variables */
+:root {
+  --nav-bg: #ffffff;
+  --nav-bg-custom: #ffffff;
+  --nav-border: rgba(0, 0, 0, 0.1);
+  --input-bg: #f9f9f9;
+  --input-border: #ccc;
+  --recent-btn-bg: #e0e0e0;
+  --recent-btn-hover: #d5d5d5;
+  --text-color: #222;
+  --placeholder-color: rgba(100, 100, 100, 0.6);
+  --accent-color: #29b6f6;
+}
+
+body.night-mode {
+  --nav-bg: #1e1e2f;
+  --nav-bg-custom: #1e1e2f;
+  --nav-border: rgba(255, 255, 255, 0.1);
+  --input-bg: #3b3b4f;
+  --input-border: #555;
+  --recent-btn-bg: #444;
+  --recent-btn-hover: #555;
+  --text-color: #eee;
+  --placeholder-color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* 🧱 Global Container Rules */
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--nav-bg);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+/* 🧼 Prevent Scroll Leaks on Components */
+.app-container {
+  max-width: 100vw;
+  overflow-x: hidden;
+  padding-inline: 12px;
+  box-sizing: border-box;
+}
+
+/* 🧾 Make scrollables safe */
+.dashboard-grid,
+.forecast-grid,
+.hourly-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+/* 🪤 Prevent text explosions */
+.forecast-card,
+.hour-item {
+  min-width: auto;
+  max-width: 100%;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+/* 👻 Fix Safari scroll jank & modern touch handling */
+* {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  box-sizing: border-box;
+}
