@@ -8,12 +8,12 @@ A futuristic Angular SSR-powered weather dashboard with real-time forecasts, hou
 
 ## 🔥 Features
 
-- ⚡ Server-Side Rendering (SSR) for lightning-fast loads
-- 🌤️ 7-day weather forecast & hourly updates
-- 🌚 Dark mode UI with glassmorphism styling
-- 📱 Responsive design for all screens
-- 🎯 Animated UI elements & box-based structure
-- 🧠 Built with Angular v20 & TypeScript
+- ⚡ Server-Side Rendering (SSR) for lightning-fast loads  
+- 🌤️ 7-day weather forecast & hourly updates  
+- 🌚 Dark mode UI with glassmorphism styling  
+- 📱 Fully responsive design for all screen sizes  
+- 🎯 Animated UI elements & box-based layout  
+- 🧠 Built with Angular v20 & TypeScript  
 
 ---
 
@@ -25,46 +25,52 @@ Clone the repo and install dependencies:
 git clone https://github.com/your-username/weather-app.git
 cd weather-app
 npm install
-Run locally:
+```
 
-bash
-Copy
-Edit
+
+## Run locally:
+
+```bash
 ng serve
+```
 Open http://localhost:4200 in your browser.
 
-🧪 Build & Deploy
+
+## 🧪 Build & Deploy
+
 To build for production:
 
-bash
-Copy
-Edit
+```bash
 ng build
+```
+
 For SSR (Angular Universal):
 
-bash
-Copy
-Edit
+```bash
 npm run build:ssr
 npm run serve:ssr
+```
+
 Deploy seamlessly to Vercel, Netlify, or your own server.
 
-🧩 Tech Stack
-Angular
 
-Vercel (for deployment)
+## 🧩 Tech Stack
 
-WeatherAPI (for data)
+- Angular
+- Vercel (for deployment)
+- WeatherAPI (for data)
 
-✨ Credits
+
+## ✨ Credits
+
 Built with ☕, 💻 & obsession for clean design by Nitesh
 
-📄 License
+
+## 📄 License
+
 This project is licensed under the MIT License.
 
-yaml
-Copy
-Edit
+```bash
 
 ---
 
@@ -75,3 +81,10 @@ Edit
 Once you're done, commit this bad boy as your `README.md` and flex that repo like a boss 💪🌩️
 
 Need help with adding badges, SEO or contributing guidelines too? Just shout.
+```
+
+
+
+
+
+
